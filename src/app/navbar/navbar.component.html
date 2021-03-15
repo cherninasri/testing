@@ -1,0 +1,44 @@
+<div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
+  <div class="container d-flex">
+    <div class="contact-info mr-auto">
+      <i class="icofont-envelope"></i>pip@pip.com.tn
+      <i class="icofont-phone"></i> +2 16 20 124 654
+    </div>
+    <div class="social-links">
+      <a href="#" class="email"><i class="icofont-envelope"></i></a>
+      <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
+
+    </div>
+  </div>
+</div>
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top">
+  <div class="container d-flex align-items-center">
+
+    <h1 class="logo mr-auto"><a href="index.html"><img src=" assets/img/clients/n1.png" alt="industris"><span></span></a></h1>
+    <!-- Uncomment below if you prefer to use an image logo -->
+    <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt=""></a>-->
+
+    <nav class="nav-menu d-none d-lg-block">
+      <ul>
+        <li class="active"><a href="index.html">Home</a></li>
+        <li ><a href="#about"  *ngIf="!isUser">About</a></li>
+        <li><a href="#services"  *ngIf="!isUser">Services</a></li>
+        <li><a href="#Reference "  *ngIf="!isUser">Reference</a></li>
+        <li><a href="#contact"  *ngIf="!isUser">Contact</a></li>
+
+        <li><a routerLink="profile" *ngIf="isUser" >profile</a></li>
+        <li><a routerLink="commande" *ngIf="isUser" >commande</a></li>
+        <li><a routerLink="reclamation" *ngIf="isUser" >Reclamation</a></li>
+        <li><button type="button" class="btn btn-outline-dark" *ngIf="!isUser" ><a routerLink="inscri" *ngIf="!isUser" >log in</a></button>
+        <li><button type="button" class="btn btn-outline-dark"*ngIf="isUser" ><a routerLink="inscri" *ngIf="isUser"  (click)="Logout()">logOut</a></button>
+
+      </li>
+
+
+      </ul>
+    </nav><!-- .nav-menu -->
+
+  </div>
+</header><!-- End Header -->
